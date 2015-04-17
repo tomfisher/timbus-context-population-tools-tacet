@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension
+       point="edu.teco.tacet.export.pageproviders">
+    <pageprovider
+          class="edu.teco.tacet.rdf.ui.RdfExportPageProvider"
+          sink_type="edu.teco.tacet.rdf">
+    </pageprovider>
+ </extension>
+  <extension
+       point="edu.teco.tacet.import.pageproviders">
+    <pageprovider
+          class="edu.teco.tacet.rdf.ui.RdfImportPageProvider"
+          source_type="edu.teco.tacet.rdf">
+    </pageprovider>
+ </extension>
+  <extension
+        point="edu.teco.tacet.readers">
+     <reader
+           backend_name="RDF"
+           class="edu.teco.tacet.rdf.RdfReaderFactory"
+           long_description="Backend to read RDF and OWL files."
+           source_type="edu.teco.tacet.rdf">
+     </reader>
+  </extension>
+  <extension
+        point="edu.teco.tacet.writers">
+        <writer
+           backend_name="RDF"
+           class="edu.teco.tacet.rdf.RdfWriterFactory"
+           long_description="Backend to write RDF and OWL files."
+           sink_type="edu.teco.tacet.rdf">
+     </writer>
+  </extension>
+
+</plugin>

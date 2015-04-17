@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="classification.commands.category"
+            name="Classificator Category">
+      </category>
+      <command
+            categoryId="classification.commands.category"
+            id="classification.commands.classificatorCommand"
+            name="Classifier">
+      </command>
+      <command
+            categoryId="classification.commands.category"
+            id="classification.commands.emulatorCommand"
+            name="Emulator">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="classification.handlers.ClassificatorHandler"
+            commandId="classification.commands.classificatorCommand">
+      </handler>
+      <handler
+            class="classification.handlers.EmulatorHandler"
+            commandId="classification.commands.emulatorCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="classification.menus.classificatorMenu"
+               label="Classify"
+               mnemonic="c">
+            <command
+                  commandId="classification.commands.classificatorCommand"
+                  id="classification.menus.classificatorCommand">
+            </command>
+            <command
+                  commandId="classification.commands.emulatorCommand"
+                  id="classification.menus.emulatorCommand">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+</plugin>

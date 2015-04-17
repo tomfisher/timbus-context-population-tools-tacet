@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.teco.tacet.meta/src/main/java/" modelPluginID="edu.teco.tacet.meta"
+    modelName="Meta" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>meta.ecore</foreignModel>
+  <genPackages prefix="Meta" basePackage="edu.teco.tacet" disposableProviderFactory="true"
+      ecorePackage="meta.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="meta.ecore#//Column">
+      <genEnumLiterals ecoreEnumLiteral="meta.ecore#//Column/Annotation"/>
+      <genEnumLiterals ecoreEnumLiteral="meta.ecore#//Column/SensorData"/>
+      <genEnumLiterals ecoreEnumLiteral="meta.ecore#//Column/Timestamp"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="meta.ecore#//TimeseriesType">
+      <genEnumLiterals ecoreEnumLiteral="meta.ecore#//TimeseriesType/Annotation"/>
+      <genEnumLiterals ecoreEnumLiteral="meta.ecore#//TimeseriesType/Sensor"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="meta.ecore#//MetaData"/>
+    <genDataTypes ecoreDataType="meta.ecore#//Unit"/>
+    <genDataTypes ecoreDataType="meta.ecore#//RdfToTimestampMapping"/>
+    <genDataTypes ecoreDataType="meta.ecore#//Model"/>
+    <genClasses ecoreClass="meta.ecore#//Project">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference meta.ecore#//Project/datasources"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//Project/identifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//Project/lastTrackId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//Project/lastSourceId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference meta.ecore#//Project/groups"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="meta.ecore#//Datasource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference meta.ecore#//Datasource/timeseries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//Datasource/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//Datasource/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//Datasource/isInMemory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//Datasource/metadata"/>
+    </genClasses>
+    <genClasses ecoreClass="meta.ecore#//RdfDatasource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//RdfDatasource/resolveUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//RdfDatasource/fileName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//RdfDatasource/rootResourceUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//RdfDatasource/model"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//RdfDatasource/timestampFormat"/>
+    </genClasses>
+    <genClasses ecoreClass="meta.ecore#//RdfTimeseries">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//RdfTimeseries/valuePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//RdfTimeseries/timestampPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//RdfTimeseries/identifierPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//RdfTimeseries/identifierValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//RdfTimeseries/mapping"/>
+    </genClasses>
+    <genClasses ecoreClass="meta.ecore#//DbColumnDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//DbColumnDescription/attributeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//DbColumnDescription/timeseriesId"/>
+    </genClasses>
+    <genClasses ecoreClass="meta.ecore#//DbDatasource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//DbDatasource/login"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//DbDatasource/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//DbDatasource/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//DbDatasource/coveredRangeStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//DbDatasource/coveredRangeEnd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//DbDatasource/sid"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference meta.ecore#//DbDatasource/columnDescriptions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//DbDatasource/timestampAttributeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//DbDatasource/query"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//DbDatasource/jdbcDriver"/>
+    </genClasses>
+    <genClasses ecoreClass="meta.ecore#//CSVDatasource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//CSVDatasource/elementSeparator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//CSVDatasource/lineSeparator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//CSVDatasource/filePath"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference meta.ecore#//CSVDatasource/columnDescriptions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//CSVDatasource/timestampFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//CSVDatasource/noOfLinesToSkip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//CSVDatasource/treatTimestampAsMillis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//CSVDatasource/timeUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//CSVDatasource/isStartFrom1970"/>
+    </genClasses>
+    <genClasses ecoreClass="meta.ecore#//ColumnDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//ColumnDescription/columnType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//ColumnDescription/timeseriesId"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="meta.ecore#//Timeseries">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//Timeseries/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference meta.ecore#//Timeseries/datasource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//Timeseries/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//Timeseries/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference meta.ecore#//Timeseries/groups"/>
+    </genClasses>
+    <genClasses ecoreClass="meta.ecore#//Group">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference meta.ecore#//Group/timeseries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//Group/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//Group/id"/>
+    </genClasses>
+    <genClasses ecoreClass="meta.ecore#//MediaDatasource"/>
+    <genClasses ecoreClass="meta.ecore#//MediaTimeseries">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//MediaTimeseries/filepath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//MediaTimeseries/startTimestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute meta.ecore#//MediaTimeseries/playbackSpeed"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

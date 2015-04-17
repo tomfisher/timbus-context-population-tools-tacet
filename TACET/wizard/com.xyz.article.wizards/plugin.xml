@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+
+
+<extension
+      point="org.eclipse.ui.exportWizards">
+      id="wizard"
+      name="Holiday"
+
+ <category
+         name="ExportWizard"
+         id="wizard.category1">
+   </category>
+   <wizard
+         name="ExportCSV"
+         icon="icons/wizard.gif"
+         category="wizard.category1"
+         class="edu.teco.tacet.wizard.ExportWizard"
+         id="wizard.wizard1">
+      <description>
+      	Export to .csv
+      </description>
+   </wizard>
+</extension>
+<extension
+      point="edu.teco.tacet.export.pageproviders">
+   <pageprovider
+         class="edu.teco.tacet.exportManager.CSVExportPageProvider"
+         sink_type="edu.teco.tacet.csv">
+   </pageprovider>
+</extension>
+
+
+</plugin>

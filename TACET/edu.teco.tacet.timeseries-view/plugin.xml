@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="edu.teco.tacet.jfreechart.category"
+            name="JFreeChart">
+      </category>
+      <view
+            category="edu.teco.tacet.jfreechart.category"
+            class="edu.teco.tacet.jfreechart.SensorDataTrackView"
+            id="edu.teco.tacet.jfreechart.SensorDataTrackView"
+            allowMultiple="true"
+            name="JFreeChart Example"
+            restorable="false">
+      </view>
+      <view
+            category="edu.teco.tacet.jfreechart.category"
+            class="edu.teco.tacet.annotation.AnnotationPart"
+            id="edu.teco.tacet.annotation.AnnotationView"
+            allowMultiple="true"
+            name="Annotation Example"
+            restorable="false">
+      </view>
+      <view
+            category="edu.teco.tacet.jfreechart.category"
+            class="edu.teco.tacet.timeview.TimeView"
+            id="edu.teco.tacet.timeview.TimeView"
+            name="Tacet Controller"
+            restorable="false">
+      </view>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="timeseries-view.commands.category"
+            name="Views Category">
+      </category>
+      <command
+            categoryId="timeseries-view.commands.category"
+            id="timeseries-view.commands.startViewsCommand"
+            name="Start Views">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="edu.teco.tacet.handler.HandlerStartViews"
+            commandId="timeseries-view.commands.startViewsCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="timeseries-view.menus.TimeseriesViewMenu"
+               label="Timeseries View"
+               mnemonic="t">
+            <command
+                  commandId="timeseries-view.commands.startViewsCommand"
+                  id="timeseries-view.menus.startViewsCommand">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>  
+   
+   <extension point="org.eclipse.ui.perspectives">
+	   <perspective
+         name="Test"
+         class="edu.teco.tacet.TrackViewController"
+         id="edu.teco.tacet.TrackViewController">
+   	</perspective>
+   </extension>
+   
+   
+   
+
+</plugin>

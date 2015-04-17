@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="edu.teco.tacet.import.pageproviders" name="Page Providers" schema="schema/edu.teco.tacet.import.pageproviders.exsd"/>
+   <extension-point id="edu.teco.tacet.readers" name="readers" schema="schema/edu.teco.tacet.readers.exsd"/>
+ <extension
+      id="wizard"
+      name="Tacet Import"
+      point="org.eclipse.ui.importWizards">
+   <category
+         name="Tacet"
+         id="edu.teco.tacet">
+   </category>
+   <wizard
+         name="Import Datasource(s)"
+         category="edu.teco.tacet"
+         class="edu.teco.tacet.importmanager.ImportManagerGui"
+         id="edu.teco.tacet.importmanager">
+      <description>
+      	Import new TACET Datasources. 
+      </description>
+   </wizard>
+ </extension>
+ 
+ 
+</plugin>

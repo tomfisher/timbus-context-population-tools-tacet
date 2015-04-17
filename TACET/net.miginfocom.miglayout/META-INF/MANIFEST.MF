@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Miglayout
+Bundle-SymbolicName: net.miginfocom.miglayout
+Bundle-Version: 4.0.0
+Bundle-ClassPath: .
+Export-Package: net.miginfocom.demo,
+ net.miginfocom.examples,
+ net.miginfocom.layout,
+ net.miginfocom.swing,
+ net.miginfocom.swt
+Require-Bundle: org.eclipse.draw2d,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

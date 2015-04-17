@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: preferences
+Bundle-SymbolicName: edu.teco.tacet.preferences;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Export-Package: edu.teco.tacet.preferences.ui
+Import-Package: org.eclipse.core.runtime.preferences;version="3.3.0",
+ org.eclipse.jface.preference,
+ org.eclipse.swt,
+ org.eclipse.ui,
+ org.osgi.service.prefs;version="1.1.1"
+Require-Bundle: org.eclipse.swt

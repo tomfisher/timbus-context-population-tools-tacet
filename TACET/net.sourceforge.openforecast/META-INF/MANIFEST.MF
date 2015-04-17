@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Openforecast
+Bundle-SymbolicName: net.sourceforge.openforecast
+Bundle-Version: 0.5.0
+Bundle-ClassPath: OpenForecast-0.5.0.jar
+Export-Package: net.sourceforge.openforecast,
+ net.sourceforge.openforecast.input,
+ net.sourceforge.openforecast.models,
+ net.sourceforge.openforecast.output
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="edu.teco.tacet.project.category"
+            name="Tacet Project">
+      </category>
+      <view
+            category="edu.teco.tacet.project.category"
+            class="edu.teco.tacet.ui.project.ProjectView"
+            id="edu.teco.tacet.project.ProjectView"
+            name="Project View"
+            restorable="true">
+      </view>
+   </extension>
+</plugin>

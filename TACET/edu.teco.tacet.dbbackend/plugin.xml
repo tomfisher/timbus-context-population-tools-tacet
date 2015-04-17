@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="edu.teco.tacet.readers">
+         <reader
+           backend_name="DB"
+           class="edu.teco.tacet.dbbackend.DbReaderFactory"
+           long_description="Database"
+           source_type="edu.teco.tacet.db">
+     </reader>
+   </extension>
+</plugin>

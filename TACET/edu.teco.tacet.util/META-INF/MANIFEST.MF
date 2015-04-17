@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Util
+Bundle-SymbolicName: edu.teco.tacet.util
+Bundle-Version: 0.0.1
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: edu.teco.tacet.util.collection,
+ edu.teco.tacet.util.function,
+ edu.teco.tacet.util.ui
+Require-Bundle: org.junit
+Import-Package: org.eclipse.jface.viewers,
+ org.eclipse.swt.widgets

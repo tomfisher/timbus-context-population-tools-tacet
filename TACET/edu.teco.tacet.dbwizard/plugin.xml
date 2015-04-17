@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="edu.teco.tacet.import.pageproviders">
+         <pageprovider
+          class="edu.teco.tacet.importWizard.db.DbPageProvider"
+          source_type="edu.teco.tacet.db">
+    </pageprovider>
+   </extension>
+</plugin>

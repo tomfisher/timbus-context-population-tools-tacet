@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="edu.teco.tacet.writers" name="writers" schema="schema/edu.teco.tacet.writers.exsd"/>
+   <extension-point id="edu.teco.tacet.export.pageproviders" name="Page Provider" schema="schema/edu.teco.tacet.export.pageproviders.exsd"/>
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <category
+            id="edu.teco.tacet"
+            name="Tacet">
+      </category>
+      <wizard
+            category="edu.teco.tacet"
+            class="edu.teco.tacet.export.ExportManagerGui"
+            id="edu.teco.tacet.exportmanager"
+            name="Export Tracks">
+         <description>
+            Export selected tracks.
+         </description>
+      </wizard>
+   </extension>
+
+</plugin>

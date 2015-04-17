@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Vlcj
+Bundle-SymbolicName: uk.co.caprica.vlcj
+Bundle-Version: 1.0.0
+Export-Package: 
+ uk.co.caprica.vlcj.binding,
+ uk.co.caprica.vlcj.binding.internal,
+ uk.co.caprica.vlcj.discovery,
+ uk.co.caprica.vlcj.player,
+ uk.co.caprica.vlcj.player.embedded,
+ uk.co.caprica.vlcj.player.embedded.videosurface,
+ uk.co.caprica.vlcj.player.embedded.videosurface.linux,
+ uk.co.caprica.vlcj.player.embedded.videosurface.mac,
+ uk.co.caprica.vlcj.player.embedded.videosurface.windows,
+ uk.co.caprica.vlcj.runtime
+Require-Bundle: com.sun.jna,
+ com.sun.jna.platform

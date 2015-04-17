@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+   <extension-point id="readers" 
+   					name="Backends providing data" 
+   					schema="schema/readers.exsd"/>
+   <extension-point id="writers" name="Backend providing means to export data" schema="schema/writers.exsd"/>
+</plugin>

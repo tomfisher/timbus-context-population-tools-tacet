@@ -27,7 +27,7 @@ It is planned to extend this tool to enable data import directly from a SPARQL e
 
 ## Running TACET
 
-One way to use the tool is to take the source code and start the tool directly via its *.jar or via an IDE (e.g. Eclipse) by running the MasterController.java. 
+One way to use the tool is to import the source code as "existing file or project" into your Eclipse IDE and run one of them "as eclipse project". 
 
 
 ### Import - Best Practice
@@ -40,12 +40,14 @@ CSV-File
 - All floating points must be in local format (e.g. France has ',' and German '.').
 
 Import
+- Choose "Import" from the menu and choose an import wizard: either "Import Datasource(s)" for CSV or RDF files or for an import from a database or the "Import Media" for audio or video files.
+- Exemplariyly, we will describe the import of an CSV file in the following.
+
 - Specify the location of the CSV file. If the file contains a header, check the box "Header" and define the element separator for the header.
 - This will automatically create the names of the columns. If no header was included, you have to set the column names manually.
 - Set the element separator for the columns and the line separator. Each column has to be specified. At least one column needs to be a timestamp (we recommend to use the first column).
-- Define the timestamp format. The importer is guessing a timestamp, but make sure if it is correct. The time stamp can either be a Java SimpleDataformat (http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html) or an incrementing counter. If you are using custom timestamps you have to provide the format and seperator (e.g. m.s.S, separator: '\.'). 
-- You have the possibility to add further rows, which are meant to be new annotation tracks. Allowed values should be stated.
-- If you intend on performing a classification, you have to add a "NEW_TRAIN_ANNOTATION" track. There should also be an existing class track. If there is none, you have to add it during the import (e.g. "NEW_LABEL_ANNOTATION").
+- Define the timestamp format. The importer is guessing a timestamp, but make sure if it is correct. The time stamp can either be a Java SimpleDataformat (http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html), an incrementing counter or a UNIX timestamp.
+- You can now change the type of track if necessary.
 
 
 ### Annotation
@@ -67,7 +69,6 @@ It also shows the number of annotations and percentage of annotated data on a tr
 To export the project to a CSV file, set the location, element separator and line separator you wish.
 To save the project, set the location to save the current project.
 To load a project, specify the location to load an existing project. 
-
 
 
 ##	Usage Scenario

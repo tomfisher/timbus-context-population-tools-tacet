@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="edu.teco.tacet.readers">
+      <reader
+            backend_name="CSV"
+            class="edu.teco.tacet.readers.csv.CSVReaderFactory"
+            long_description="Reads data from files formatted as comma separated values. There must be exactly on timestamp column with ascending timestamp values."
+            source_type="edu.teco.tacet.csv">
+      </reader>
+   </extension>
+   <extension
+         point="edu.teco.tacet.writers">
+      <writer
+            backend_name="CSV"
+            class="edu.teco.tacet.writer.csv.CsvWriterFactory"
+            sink_type="edu.teco.tacet.csv">
+      </writer>
+   </extension>
+
+</plugin>

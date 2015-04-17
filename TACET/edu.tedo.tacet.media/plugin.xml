@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Tacet"
+            id="edu.tedo.tacet.media">
+      </category>
+      <view
+            name="Sample View"
+            icon="icons/sample.gif"
+            category="edu.tedo.tacet.media"
+            class="edu.tedo.tacet.media.view.MediaView"
+            allowMultiple="true"
+            id="edu.tedo.tacet.media.view.MediaView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.ProblemView"
+               relationship="right"
+               id="edu.tedo.tacet.media.view.MediaView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+    <extension
+      id="wizard"
+      name="Tacet Import"
+      point="org.eclipse.ui.importWizards">
+   <category
+         name="Tacet"
+         id="edu.teco.tacet">
+   </category>
+   <wizard
+         name="Import Media"
+         category="edu.teco.tacet"
+         class="edu.tedo.tacet.media.importmanager.MediaImportGui"
+         id="edu.tedo.tacet.media.importmanager">
+      <description>
+      	Import new TACET Media files. 
+      </description>
+   </wizard>
+ </extension>
+
+</plugin>
